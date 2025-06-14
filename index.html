@@ -1,10 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latent-Action Diffusion for Efficient Robot Policy Inference</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+        font-family: 'Roboto', Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .main-content {
+        width: 100%;
+        max-width: 900px;
+        margin: 64px auto 0 auto;
+        text-align: center;
+      }
+      .title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #22223b;
+        line-height: 1.2;
+        margin-bottom: 28px;
+      }
+      .divider {
+        width: 80px;
+        height: 3px;
+        background: #bfc6d1;
+        border: none;
+        border-radius: 2px;
+        margin: 0 auto 36px auto;
+      }
+      .authors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 48px;
+        margin-bottom: 0;
+      }
+      .author {
+        min-width: 220px;
+        margin-bottom: 16px;
+      }
+      .author-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #22223b;
+        margin-bottom: 6px;
+      }
+      .author-affil {
+        font-style: italic;
+        color: #4a4e69;
+        font-size: 1.05rem;
+        margin-bottom: 2px;
+      }
+      .author-email {
+        color: #3a5a98;
+        font-size: 1rem;
+        text-decoration: none;
+      }
+      @media (max-width: 700px) {
+        .main-content { padding: 0 8px; }
+        .title { font-size: 2rem; }
+        .authors { flex-direction: column; gap: 24px; }
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello, GitHub Pages!</h1>
+    <div class="main-content">
+      <div class="title">
+        Latent-Action Diffusion for Efficient Robot Policy Inference
+      </div>
+      <div class="divider"></div>
+      <div class="authors">
+        <div class="author">
+          <div class="author-name">Samuel Chua</div>
+          <div class="author-affil">University of California, Los Angeles<br>Computer Science and Engineering</div>
+          <a class="author-email" href="mailto:samuelchua2001@gmail.com">samuelchua2001@gmail.com</a>
+        </div>
+        <div class="author">
+          <div class="author-name">Edmond Wang</div>
+          <div class="author-affil">University of California, Los Angeles<br>Computer Science</div>
+          <a class="author-email" href="mailto:edmond.wang@ucla.edu">edmond.wang@ucla.edu</a>
+        </div>
+        <div class="author">
+          <div class="author-name">Konstantin Tzantchev</div>
+          <div class="author-affil">University of California, Los Angeles<br>Computer Science</div>
+          <a class="author-email" href="mailto:tzantchev@ucla.edu">tzantchev@ucla.edu</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
