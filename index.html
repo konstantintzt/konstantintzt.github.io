@@ -138,6 +138,22 @@
         justify-items: center;
         align-items: center;
       }
+      .gifs-col-captions {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 700px;
+        margin: 24px auto 0 auto;
+        margin-bottom: 0;
+        gap: 24px;
+        justify-items: center;
+      }
+      .gifs-col-caption {
+        text-align: center;
+        font-size: 1.08rem;
+        color: #4a4e69;
+        font-style: italic;
+        margin-bottom: 8px;
+      }
       .demo-gif {
         width: 100%;
         max-width: 220px;
@@ -152,6 +168,9 @@
           grid-template-columns: repeat(2, 1fr);
           grid-template-rows: repeat(3, 1fr);
         }
+        .gifs-col-captions {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
       @media (max-width: 600px) {
         .gifs-grid {
@@ -159,6 +178,52 @@
           grid-template-rows: repeat(6, 1fr);
         }
         .demo-gif {
+          max-width: 98vw;
+        }
+        .gifs-col-captions {
+          grid-template-columns: 1fr;
+        }
+      }
+      .video-section {
+        margin: 56px auto 0 auto;
+        max-width: 900px;
+        text-align: center;
+      }
+      .video-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+        margin-top: 18px;
+      }
+      .video-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      .video-caption {
+        margin-top: 10px;
+        font-size: 1.05rem;
+        color: #4a4e69;
+        text-align: center;
+        font-style: italic;
+      }
+      .demo-video {
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        background: #e0e7ef;
+        object-fit: cover;
+      }
+      @media (max-width: 900px) {
+        .video-row {
+          flex-direction: column;
+          gap: 24px;
+        }
+        .demo-video {
           max-width: 98vw;
         }
       }
@@ -231,14 +296,47 @@
           reducing computational overhead in real-time robotic control.
         </div>
       </div>
+      <div class="video-section">
+        <h2 class="section-heading">Diffusion Policy Rollouts</h2>
+        <div class="video-row">
+          <div class="video-col">
+            <video
+              class="demo-video"
+              src="rollout1.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+            <div class="video-caption">Diffusion policy original</div>
+          </div>
+          <div class="video-col">
+            <video
+              class="demo-video"
+              src="rollout2.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+            <div class="video-caption">Diffusion policy with Beta-VAE</div>
+          </div>
+        </div>
+      </div>
       <div class="gifs-section">
         <h2 class="section-heading">Beta-VAE Reconstruction</h2>
         <div class="gifs-note">
           We trained a Beta-VAE to Reconstruct actions on the pushT dataset. We
-          observed good reconstruction quality across a variety of episodes.
+          observed good reconstruction quality across a variety of episodes. In
+          isolation, the Beta-VAE was able to achieve excellent results.
         </div>
         <div class="gifs-note">
           Top: Original action. Bottom: Reconstructed action
+        </div>
+        <div class="gifs-col-captions">
+          <div class="gifs-col-caption">Episode 0</div>
+          <div class="gifs-col-caption">Episode 4</div>
+          <div class="gifs-col-caption">Episode 8</div>
         </div>
         <div class="gifs-grid">
           <img src="vid1.gif" alt="Demo 1" class="demo-gif" />
